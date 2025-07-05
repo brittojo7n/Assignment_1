@@ -1,0 +1,39 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #fff8f0;
+  padding: 20px;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.image img {
+  max-width: 225px;
+  height: auto;
+  border-radius: 8px;
+}
+
+.text {
+  max-width: 400px;
+}
+
+.ingredients li {
+  color: #e65100;
+  margin-bottom: 5px;
+}
+
+.steps li {
+  color: #1a237e;
+  margin-bottom: 5px;
+}
