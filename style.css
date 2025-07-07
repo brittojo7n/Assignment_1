@@ -28,12 +28,8 @@ body {
   max-width: 400px;
 }
 
-.ingredients li {
-  color: #e65100;
+.steps, .ingredients, li {
+  color: #7e1a1a;
   margin-bottom: 5px;
-}
-
-.steps li {
-  color: #1a237e;
-  margin-bottom: 5px;
+  margin-left: 15px;
 }
