@@ -6,7 +6,7 @@
 
 body {
   font-family: Arial, sans-serif;
-  background-color: #fff8f0;
+  background-color: #0f0f0f;
   padding: 20px;
 }
 
@@ -30,7 +30,11 @@ img {
 }
 
 .steps, .ingredients, li {
-  color: #7e1a1a;
+  color:#ffffff;
   margin-bottom: 5px;
   margin-left: 15px;
+}
+
+h2 {
+  color: #fff86d;
 }
