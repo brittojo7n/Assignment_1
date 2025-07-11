@@ -1,63 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Simple Pasta Recipe</title>
-
-  <style>
-    header {
-      background-color: #16345d;
-      color: white;
-      text-align: center;
-      padding: 1rem;
-      font-family: Arial, sans-serif;
-    }
-  </style>
-
-  <link rel="stylesheet" href="style.css">
-  
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Recipe Finder</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <section class="finder-section">
+    <div class="main-heading">
+      <h1>Recipe Finder</h1>
+      <p>Discover your favorite meal</p>
+    </div>
+    <div class="search-bar">
+      <input type="text" id="searchInput" placeholder="Search for a recipe..." />
+      <button id="searchButton">Search</button>
+    </div>
 
-  <header>
-    <h1>Simple Pasta Recipe</h1>
-  </header><br>
+    <div id="recipeGrid" class="grid"></div>
 
-  <section class="container">
-    <section>
-      <img src="recipe-image.jpg" alt="Pasta Dish">
-    </section><br>
-
-    <section class="text">
-      <h2>Ingredients</h2><br>
-      <ul class="ingredients">
-        <li>200g pasta</li>
-        <li>1 tbsp olive oil</li>
-        <li>2 garlic cloves</li>
-        <li>Salt and pepper to taste</li>
-      </ul><br>
-
-      <h2>Steps</h2><br>
-      <ol class="steps">
-        <li>Boil water in a pot.</li>
-        <li>Add pasta and cook for 8-10 minutes.</li>
-        <li>Heat oil and sauté garlic.</li>
-        <li>Mix pasta with garlic, season, and serve.</li>
-      </ol>
-    </section>
+    <h2>Favorite Recipes</h2>
+    <div id="favorites" class="grid"></div>
   </section>
-<!-- 
 
-HTML contains all for the page, which involve 
-headings, images, lists, and text blocks.
+  <div id="recipeModal" class="modal">
+    <div class="modal-content">
+      <span class="close-button">&times;</span>
+      <div id="modalRecipeDetails"></div>
+    </div>
+  </div>
 
-CSS dictates the interface and the layout such as: 
-colors, font, spacing, or positioning (like Flexbox: place the image next to the text). 
-
-These two collaborate in creating a well-structured, styled, and 
-ultimately, a beautiful website. 
-  
--->
+  <script src="script.js"></script>
 </body>
 </html>
