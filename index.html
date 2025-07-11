@@ -1,130 +1,63 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Stone Paper Scissors - 5 Rounds</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Simple Pasta Recipe</title>
+
+  <style>
+    header {
+      background-color: #16345d;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+      font-family: Arial, sans-serif;
+    }
+  </style>
+
+  <link rel="stylesheet" href="style.css">
+  
 </head>
-<style>
-    body{
-        background-image: url("https://s.tmimgcdn.com/scr/800x500/296200/premium-vector-background-images--high-quality-background--modern-hd-background-images_296286-original.jpg");
-        background-repeat: no-repeat;
-        background-size: cover;
-    }
-    .overlay{
-        background-color: rgba(56, 51, 51, 0.858);
-        width: 600px;
-        height: 700px;
-        display: block;
-        left: 500px;
-       position: relative;
-       
-     
-       
-    }
-    p{
-        color: white;
-    }
-    h3{
-        color: white;
-    }
-    h1{
-        color: white;
-    }
-  button {
-    background-color: rgba(211, 84, 84, 0.715);
-    color: white;
-    padding: 10px;
-    border: none;
-    border-radius: 9px;
-    font-size: 24px;
-}
-
-
-button:hover {
-    background-color: rgb(211, 84, 84);
-}
-
-    
-</style>
 <body>
 
-<div class="overlay"><br><br>
-  <center><h1>Stone Paper Scissors - Best of 5</h1></center>
+  <header>
+    <h1>Simple Pasta Recipe</h1>
+  </header><br>
 
-  <center><p>Choose your move:</p>
-  <button onclick="play('stone')">🪨 Stone</button>
-  <button onclick="play('paper')">📄 Paper</button>
-  <button onclick="play('scissor')">✂️ Scissor</button>
+  <section class="container">
+    <section>
+      <img src="recipe-image.jpg" alt="Pasta Dish">
+    </section><br>
 
-  <h3 id="result"></h3>
-  <p id="choices"></p>
-  <p id="score"></p>
-  <p id="round"></p></center></div>
+    <section class="text">
+      <h2>Ingredients</h2><br>
+      <ul class="ingredients">
+        <li>200g pasta</li>
+        <li>1 tbsp olive oil</li>
+        <li>2 garlic cloves</li>
+        <li>Salt and pepper to taste</li>
+      </ul><br>
 
-  <script>
-    let userScore = 0;
-    let computerScore = 0;
-    let currentRound = 1;
-    const totalRounds = 5;
+      <h2>Steps</h2><br>
+      <ol class="steps">
+        <li>Boil water in a pot.</li>
+        <li>Add pasta and cook for 8-10 minutes.</li>
+        <li>Heat oil and sauté garlic.</li>
+        <li>Mix pasta with garlic, season, and serve.</li>
+      </ol>
+    </section>
+  </section>
+<!-- 
 
-    function play(userChoice) {
-      if (currentRound > totalRounds) 
-        return;
+HTML contains all for the page, which involve 
+headings, images, lists, and text blocks.
 
-    const choices = ['stone', 'paper', 'scissor'];//listing
-    const computerChoice = choices[Math.floor(Math.random() * 3)];// choices array random selection
+CSS dictates the interface and the layout such as: 
+colors, font, spacing, or positioning (like Flexbox: place the image next to the text). 
 
-    let result = "";
-
-    if (userChoice === computerChoice) {
-        result = "Round " + currentRound + ": It's a draw!";
-    } 
-    else if (
-        (userChoice === 'stone' && computerChoice === 'scissor') ||
-        (userChoice === 'paper' && computerChoice === 'stone') ||
-        (userChoice === 'scissor' && computerChoice === 'paper')
-      ) {
-        userScore++;
-        result = "Round " + currentRound + ": You win!";
-      } else {
-        computerScore++;
-        result = "Round " + currentRound + ": Computer wins!";
-      }
-
-      document.getElementById("choices").innerText = 
-        `You chose: ${userChoice} | Computer chose: ${computerChoice}`;
-      document.getElementById("result").innerText = result;
-      document.getElementById("score").innerText = 
-        `Score - You: ${userScore} | Computer: ${computerScore}`;
-      document.getElementById("round").innerText = 
-        `Round ${currentRound} of ${totalRounds}`;
-
-      currentRound++;
-
-      if (currentRound > totalRounds) {
-        setTimeout(() => {
-          let finalMessage = "";
-          if (userScore > computerScore) {
-            finalMessage = "🎉 You won the game!";
-          } else if (userScore < computerScore) {
-            finalMessage = "😢 Computer won the game!";
-          } else {
-            finalMessage = "🤝 The game is a draw!";
-          }
-          alert(finalMessage);
-          resetGame();
-        }, 500);
-      }
-    }
-
-    function resetGame() {
-      userScore = 0;
-      computerScore = 0;
-      currentRound = 1;
-      document.getElementById("result").innerText = "";
-      document.getElementById("choices").innerText = "";
-      document.getElementById("score").innerText = "";
-      document.getElementById("round").innerText = "";
-    }
-  </script>
+These two collaborate in creating a well-structured, styled, and 
+ultimately, a beautiful website. 
+  
+-->
 </body>
 </html>
